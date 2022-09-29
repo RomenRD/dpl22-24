@@ -10,7 +10,8 @@ Romen Ramos Díaz (alu2)
 
 Creamos el repositorio desde GitHub y lo llamamos git-work. Tras crearlo con un README.md y una licencia MIT lo clonamos a nuestra máquina con `git clone https://github.com/vmcabreu/git-work.git`
 
-
+### Creación del repositorio:
+<img src="imgs\0.png">
   
   
  
