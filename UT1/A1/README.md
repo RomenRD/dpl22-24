@@ -37,9 +37,18 @@ Tras esto clonará, el fork para poder colaborar en el proyecto.
 
 ## 4. Creación de ramas
 Alu2 creará una rama en su repo, llamada custom-text mediante `git branch custom-text`.
-Tras la creación de la rama, alu2 se mueve a ella con un `git switch custom-text` y se asegura de que esta en la rama correcta con el comando ´git branch´ .
+Tras la creación de la rama, alu2 se mueve a ella con un `git switch custom-text` y se asegura de que esta en la rama correcta con el comando `git branch` .
+El alu2 añadirá cambio al index.html y lo subirá al upstream como ya hicimos antes:
+- `git add index.html`
+- `git commit -m "Cambios en el index.html"` 
+- `git --set-upstream origin custom-text`
 
 ## 5. Pull Request
+El siguiente paso es que alu2 le solicite un pull request a alu1 mediante la web de GitHub.
+Para poder aprobar este Pull Request, alu1 probará los cambios en su máquina. Para ello, alu1 necesita acceder a la rama custom-text en el remoto de alu2.
+Por lo tanto alu1 añade el remoto en su máquina (`git add RomenRD https://github.com/RomenRD/git-work.git`) y descargamos la rama que queremos con `git fetch RomenRD custom-text` y ahora alu1 se situa en la rama con `git switch custom-text`
+
+<img src="img\4.png">
 
 ## 6. Merge
 
