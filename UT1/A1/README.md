@@ -46,14 +46,68 @@ El alu2 añadirá cambio al index.html y lo subirá al upstream como ya hicimos 
 ## 5. Pull Request
 El siguiente paso es que alu2 le solicite un pull request a alu1 mediante la web de GitHub.
 Para poder aprobar este Pull Request, alu1 probará los cambios en su máquina. Para ello, alu1 necesita acceder a la rama custom-text en el remoto de alu2.
-Por lo tanto alu1 añade el remoto en su máquina (`git add RomenRD https://github.com/RomenRD/git-work.git`) y descargamos la rama que queremos con `git fetch RomenRD custom-text` y ahora alu1 se situa en la rama con `git switch custom-text`
+Por lo tanto alu1 añade el remoto en su máquina (`git add RomenRD https://github.com/RomenRD/git-work.git`) y descargamos la rama que queremos con `git fetch RomenRD custom-text` y ahora alu1 se situa en la rama con `git switch custom-text` y probará los cambios propuestos al proyecto
 
 <img src="img\4_1.png">
 
+Luego alu1 y alu2 tienen una pequeña conversación sobre los cambios realizados por cada parte.
+
+<img src="img\5.png">
+
 ## 6. Merge
 
+Ambos han hecho varios cambios y el las propuestas hechas por alu2 han convencido a alu1 por lo tanto, este procede al merge.
+
+<img src="img\6.png">
+
+Tras confirmar el merge, el pull request se cierra y la rama main del proyecto de alu1 se fusiona con los cambios de alu2.
+
+<img src="img\7.png">
+
+
 ## 7. Conflicto
+El proyecto sigue adelante y alu1 cambia la linea 10 del cover.css a:
+```css
+color: purple;
+```
+<img src="img\8.png">
+
+Luego de realizar los cambios, alu1 lo sube al upstream del repositorio y realiza un commit local en el main.
+
+<img src="img\9.png">
+
+Mientras tanto alu2 crea una nueva rama a la vez que se mueve a ella (`git switch -c cool-colors`), realiza los estos cambios
+```css
+color: darkgreen;
+```
+Y los sube a su repositorio y envia un Pull Request para alu1. Este hará lo mismo que la anterior vez, se bajará la rama cool-colors y probara los cambios en su máquina.
+
+<img src="img\10.png">
+
+Pero, tras probar los cambios propuestos por alu2, hay un conflicto entre el proyecto y el archivo editado del alu2.
+
+<img src="img\11.png">
+
+Alu1 tendrá que resolver los conflictos de los ficheros para poder realizar el merge. Al parecer el conflicto son los cambios al cover.css por lo tanto hay que resolverlo. 
+
+<img src="img\12.png">
+
+<img src="img\13.png">
+
+Despues de que alu1 resolviera el conflicto, ya es posible realizar el merge del Pull Request en la rama principal del proyecto.
+
+<img src="img\14.png">
 
 ## 8. Release
-  
+
+Tras todos los cambios realizados por alu1 y alu2, el proyecto esta preparado para su primer lanzamiento. Por ello procedemos al etiquetado de versiones.
+La primera versión de este proyecto será la 0.1.0 por lo tanto necesitamos crear la etiqueta para esta versión.
+
+<img src="img\15.png">
+
+Finalmente tras etiquetar y lanzar el proyecto ya esta disponible en la pestaña de releases del repositorio git-work
+
+<img src="img\16.png">
+
+<img src="img\17.png">
  
