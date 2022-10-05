@@ -48,7 +48,7 @@ El siguiente paso es que alu2 le solicite un pull request a alu1 mediante la web
 Para poder aprobar este Pull Request, alu1 probará los cambios en su máquina. Para ello, alu1 necesita acceder a la rama custom-text en el remoto de alu2.
 Por lo tanto alu1 añade el remoto en su máquina (`git add RomenRD https://github.com/RomenRD/git-work.git`) y descargamos la rama que queremos con `git fetch RomenRD custom-text` y ahora alu1 se situa en la rama con `git switch custom-text`
 
-<img src="img\4.png">
+<img src="img\4_1.png">
 
 ## 6. Merge
 
